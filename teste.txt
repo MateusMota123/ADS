@@ -1,0 +1,96 @@
+Responsavel: Mateus Siqueira Mota
+RA:1802466
+
+
+
+Tema:
+
+Sistema para administrar para uma escola
+ 
+======================================================================================================
+Relacionamento das Tabelas do Banco de dados:
+
+--Cadastro_Pessoa = (Tipo, nome, endereço, Data_Nascimento, Id_Pessoa)
+
+--Curso  = (id_curso,Nome, Duração, Tipo_curso)
+
+--Chamada = (Id_Curso, Id_Materia , Id_Semestre , Dia_Aula, Hora_de, Hora_ate , Presença)
+
+--Notas = (Id_Curso, Id_Materia , Id_Semestre, Nota_P1, Nota_Ac , Peso_P1, Peso_Ac)
+
+--Semestre = (Id_sala, Nome_Sala , Capacidade, Localização , Id_Dsponibilidade.CE , Id_Nota.CE)
+
+--Sala = (Id_sala, Nome_Sala , Capacidade, Localização)
+ 
+--Materia = (id_Materia , nome,  num_Alunos, Professor,Id_ Curso.CE , Id_pessoa.CE, Id_Semestre. CE) 
+
+--Disponibilidade_sala = (Id_sala, Id_materia.CE , dia, Hora_de, Hora_ate)
+
+--Diploma = (Nome, Id_Materia.CE)
+======================================================================================================
+
+Infra-estrutura:
+
+Será usado SQL Server  para criação de seu banco de dados pois o sistema oferece recursos avançados que facilitam a atualização dos dados e garantem a confiabilidade das informações armazenadas.
+Será usado a linguagem Python para criação do sistema back-end pois o grupo possui mais familiaridade para o desenvolvimento
+Será usado HTML e Javascript para criação de seu front-end. 
+Também será usado o sistema operacional Linux, tendo seu baixo custo e muitas atualizações relacionadas à segurança  e as novas tecnologias 
+
+======================================================================================================
+
+Funcionamento:
+
+Para o desenvolvedor será necessário a criação de algumas telas de cadastro.
+Sendo elas:
+
+Cadastro de pessoa
+Uma flag para selecionar se essa pessoa é aluno, professor e funcionário,
+Caso for aluno será habilitados os campos padrão, 
+Nome:
+Endereço:
+Telefone: 
+RA : (Registro acadêmico)
+
+Caso for professor , Alguns compôs será habilitados, sendo eles:
+Nome:
+Endereço:
+Telefone:
+Horário das aulas:
+RE: (Registro Empregado)
+
+Para caso de funcionário.
+Será acrescentado o seguinte campo.
+Nome:
+Endereço:
+Telefone: 
+ Profissão: 
+RE: (Registro Empregado)
+ 
+Sendo esses campos para cadastro de pessoa onde será armazenado direto no BD.
+
+Será feito a tela de cadastro de curso,
+Contendo os campos:
+Matérias que contem este curso.
+Duração do curso.
+Sala que será data a aula desse curso.
+Quantidade de vagas para esse curso.
+Horários de início e fim.
+
+Após esses procedimentos de cadastro, terá uma necessidade para criação da tela de matricula.
+Contendo ela:
+Informações cadastradas do aluno.
+Informações cadastradas do curso.
+Informações de quais professores desse curso.
+Informações de horário de início e fim.
+Informações da duração do curso.
+
+Por fim desse procedimento sendo gerado o boletim de frequência e notas desse aluno cadastrado 
+
+Todo professor terá que ter um relatório de notas e presença para sua matéria para cada aluno cadastrado no curso.
+Sua finalidade é ter um controle de frequência e notas para que no fim de cada semestre que seja calculado se o aluno passará ou terá que repetir a matéria 
+Critérios de aceite para aprovação: frequência maior que 75% e a média final de sua nota maior ou igual a 6.0
+
+Terá que ser elaborado uma tela para que o professor consiga lançar diariamente a presença,
+Nota de cada Ac sendo elas 10 ao total e por fim nota de sua prova. 
+Por fim gerando um diploma para todos os alunos que se encaixarem em todos esses quesitos para aprovação do curso e assim gerando seu diploma.
+
